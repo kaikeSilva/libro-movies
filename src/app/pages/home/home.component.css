@@ -1,0 +1,36 @@
+mat-sidenav-container {
+    height: 100%;
+}
+
+mat-sidenav-content {
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 9;
+}
+
+mat-sidenav {
+    padding: 16px;
+    width: 25%;
+    background-color: red;
+    color: white;
+}
+
+@media screen and (max-width: 480px) {
+    mat-sidenav {
+        width: 50%;
+    }
+}
+
+.height-calc {
+    height: calc(100% - 64px);
+}
+
+.btn-fixed {
+    top: 10px !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    position: fixed !important;
+    z-index: 20;
+}

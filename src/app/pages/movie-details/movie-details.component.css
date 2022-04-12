@@ -1,0 +1,11 @@
+.rating-box {
+    border-radius: 15px;
+    color: white;
+    background-color: green;
+    text-align: center;
+    padding: 15px 5px;
+}
+
+.h-100-p-calc {
+    height: calc(100% - 64px);
+}

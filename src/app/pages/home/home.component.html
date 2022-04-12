@@ -1,0 +1,16 @@
+<mat-sidenav-container class="height-calc">
+    <mat-sidenav style="z-index: 15;" mode="side" [(opened)]="opened">
+        <!-- TODO: Add Filtros na sidebar no futuro -->
+        <!-- <div>sidenav </div>
+        <div>filters</div> -->
+    </mat-sidenav>
+    <mat-sidenav-content #scrollElement (scroll)="callMore($event)" class="p-0">
+        <!-- <button class="btn-fixed" mat-raised-button (click)="openFilters()">abrir</button> -->
+        <div class="d-flex f-row flex-wrap">
+            <app-movie-card (onMovieSelected)="navigateToDetails($event)" class="w-25-p-resp" *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
+            <div  class="d-flex jc-center ai-center w-100-p">
+                <mat-spinner *ngIf="this.loading"></mat-spinner>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

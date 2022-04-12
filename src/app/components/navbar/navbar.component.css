@@ -1,0 +1,11 @@
+.stick {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 9;
+}
+
+.height-64 {
+    max-height: 64px;
+    min-height: 64px;
+}

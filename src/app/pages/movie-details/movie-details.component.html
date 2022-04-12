@@ -1,0 +1,21 @@
+<div [ngStyle]="{
+'background-image': 'url('+this?.movie?.backdropPath+')',
+'background-position': 'center center',
+'background-repeat': 'no-repeat',
+'background-size': 'cover'}"
+class="bx-border-box d-flex jc-space-between ai-center w-100-p h-100-p-calc p-5-resp">
+    <mat-card class="mw-40-p-resp">
+        <mat-card-title >
+            <div class="d-flex flex-row jc-space-between ai-center">
+                <span class="w-50-p mat-display-1">{{movie?.title}}</span>
+                <div class=" rating-box w-30-p mat-display-2">{{movie?.voteAverage}}</div>     
+            </div>
+        </mat-card-title>
+        <mat-card-content>
+            <p class="mat-headline">{{movie?.overview}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <a *ngIf="movie?.homepage" target="blanck" mat-raised-button href="{{movie?.homepage}}">Assistir agora </a>
+        </mat-card-actions>
+    </mat-card>
+</div>
